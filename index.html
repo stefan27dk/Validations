@@ -12,16 +12,22 @@
     <label>Normal input: </label>
 </br>
 <input onkeydown="return onlyNumbers(event)" name="onlyNumbers" type="text"/> 
-<label  for="onlyNumbers">Only Numbers + allow CTRL + A</label>
+<label  for="onlyNumbers">Only Numbers + allow CTRL + A, arrows + SHIFT</label>
     
 </br>
 <input onkeydown="return onlyLetters(event)" name="onlyLetters" type="text"/> 
-<label  for="onlyLetters">Only Letters</label>
+<label  for="onlyLetters">Only Letters + CTRL A, arrows + SHIFT</label>
 
 
 </br>
 <input onkeydown="return onlyLettersAndSpace(event)" name="onlyLettersAndSpace" type="text"/> 
 <label  for="onlyLettersAndSpace">Only Letters and space</label>
     
+
+
+</br>
+<input onkeydown="return onlyNumbersAndComma(event)" name="onlyNumbersAndComma" type="text"/> 
+<label  for="onlyNumbersAndComma">Only Numbers and comma</label>
+  
 </body>
 </html>
