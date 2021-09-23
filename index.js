@@ -69,4 +69,34 @@
            }
 
 
+
+
+
+
+
+
+           
+
+     
+          // ===================== Allow - Only Letters and Space ===============================================================
+          
+          const onlyLettersAndSpace = (key) => 
+          {
+               var keycode = (key.which) ? key.which : key.keyCode;
+           
+                
+               if ((keycode > 7 && keycode < 16) || keycode == 32 || (keycode > 34 && keycode < 48) || (keycode > 64 && keycode < 91)) 
+               {
+                   return true;
+               }
+               else 
+               {
+                   return false;
+               }
+           
+           }
+
+
+ 
+
  
