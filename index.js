@@ -6,7 +6,7 @@
           if(event.shiftKey) // Disable SHIFT
           {
              return false;
-          }
+          } 
           if(event.ctrlKey && event.altKey) // Disable CTRL + ALT
           {
              return false;
@@ -23,14 +23,18 @@
           {
             return true;
           }
-          else if ((keycode > 8 && keycode < 16) || (keycode > 34 && keycode < 65) || (keycode > 92 && keycode < 106)) // 8 = backspace & 46 = DEL  || 48-57 = numbers
+          else if(keycode > 105)
+          {
+           return false;
+        //    event.preventDefault();
+          }
+          else if ((keycode > 7 && keycode < 16) || (keycode > 34 && keycode < 65) || (keycode > 92 && keycode < 106)) // 8 = backspace & 46 = DEL  || 48-57 = numbers
           {
               console.log(keycode);
               return true;
-          }
+          } 
           else
            {
-              console.log("FALSE:" + keycode);
               return false;
           }
      }
