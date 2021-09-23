@@ -40,11 +40,4 @@
      }
 
 
-
-    //  if (!(keycode == 8 || keycode == 46) && (keycode < 48 || keycode > 57)) // 8 = backspace & 46 = DEL  || 48-57 = numbers
-    //  {
-    //      return false;
-    //  }
-    //  else {
-    //      return true;
-    //  }
+ 
