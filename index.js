@@ -102,7 +102,7 @@
          }
     }
 
-    
+
 
      
           // ===================== Allow - Only Letters ===============================================================
@@ -155,6 +155,37 @@
  
 
  
+
+
+
+           
+     
+          // ===================== Allow - Only Letters, Space and special chars ===============================================================
+          
+          const onlyLettersAndSpecialChars = (event) => 
+          {
+               var keycode = (event.which) ? event.which : event.keyCode;
+           
+                if(event.shiftKey)
+                {
+                  return true;
+                }
+                else if(event.ctrlKey && event.altKey)
+                {
+                  return true;
+                }
+               else if ((keycode > 7 && keycode < 16) || keycode == 32 || (keycode > 34 && keycode < 48) || (keycode > 64 && keycode < 91)) 
+               {
+                   return true;
+               }
+               else 
+               {
+                   return false;
+               }
+           
+           }
+
+
 
 
 
