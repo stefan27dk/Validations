@@ -3,11 +3,15 @@
      {
           var keycode = (event.which) ? event.which : event.keyCode;
       
-          if(event.shiftKey) // Disable SHIFT
+          if(event.shiftKey && (keycode > 34 && keycode < 44)) // Disable SHIFT
           {
-             return false;
+             return true;
           } 
-          if(event.ctrlKey && event.altKey) // Disable CTRL + ALT
+          else if(event.shiftKey)
+          {
+              return false;
+          }
+          else if(event.ctrlKey && event.altKey) // Disable CTRL + ALT
           {
              return false;
           }
