@@ -1,5 +1,5 @@
      // ===================== Allow - Only Numbers ===============================================================
-    var  onlyNumbers = (event) => 
+    const  onlyNumbers = (event) => 
      {
           var keycode = (event.which) ? event.which : event.keyCode;
       
@@ -23,10 +23,10 @@
           {
             return true;
           }
-          else if(keycode > 105)
+          else if(keycode > 105) // All others not numbers
           {
            return false;
-        //    event.preventDefault();
+           //  event.preventDefault();
           }
           else if ((keycode > 7 && keycode < 16) || (keycode > 34 && keycode < 65) || (keycode > 92 && keycode < 106)) // 8 = backspace & 46 = DEL  || 48-57 = numbers
           {
@@ -38,6 +38,31 @@
               return false;
           }
      }
+
+
+
+
+
+
+
+     
+          // ===================== Allow - Only Letters ===============================================================
+          
+          const onlyLetters = (key) => 
+          {
+               var keycode = (key.which) ? key.which : key.keyCode;
+           
+                
+               if ((keycode > 7 && keycode < 16) || (keycode > 34 && keycode < 48) || (keycode > 64 && keycode < 91)) 
+               {
+                   return true;
+               }
+               else 
+               {
+                   return false;
+               }
+           
+           }
 
 
  
